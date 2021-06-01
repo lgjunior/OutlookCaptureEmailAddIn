@@ -276,6 +276,7 @@
     <None Include="app.config" />
     <None Include="libmongocrypt.dylib" />
     <None Include="libmongocrypt.so" />
+    <None Include="OutlookCaptureEmailAddIn_1_TemporaryKey.pfx" />
     <None Include="OutlookCaptureEmailAddIn_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -310,7 +311,6 @@
     <Content Include="Core\Compression\Zstandard\lib\win\libzstd.dll" />
     <Content Include="mongocrypt.dll" />
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -319,10 +319,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>OutlookCaptureEmailAddIn_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>OutlookCaptureEmailAddIn_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>AEAD65C757C3064A369D18B5268068C8B7D09224</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>5C6902F42FC7FC052FD08669B704427211BA8D97</ManifestCertificateThumbprint>
   </PropertyGroup>
   <!-- Include the build rules for a C# project. -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

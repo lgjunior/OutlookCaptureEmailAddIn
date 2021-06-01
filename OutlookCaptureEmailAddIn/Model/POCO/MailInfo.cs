@@ -15,5 +15,6 @@ namespace OutlookCaptureEmailAddIn.Model.POCO
         public String StoreID { get; set; }
         public String SenderEmailAddress { get; set; }
         public Microsoft.Office.Interop.Outlook.Folder Folder { get; set;}
+        public string Subject { get; internal set; }
     }
 }

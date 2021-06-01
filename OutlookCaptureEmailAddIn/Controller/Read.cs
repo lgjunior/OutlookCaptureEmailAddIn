@@ -26,6 +26,7 @@ namespace OutlookCaptureEmailAddIn.Controller
                 ret.SenderEmailAddress = myItem.SenderEmailAddress;
                 ret.StoreID = myItem.Parent.StoreID;
                 ret.Folder = myItem.Parent;
+                ret.Subject = myItem.Subject;
             }
 
             return ret;

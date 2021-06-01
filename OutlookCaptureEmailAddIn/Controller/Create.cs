@@ -17,13 +17,15 @@ namespace OutlookCaptureEmailAddIn.Controller
             Model.DB.CreateDelete(record);
         }
 
-        public static void Move(Model.POCO.MailInfo _mail, Model.POCO.FolderInfo _folder)
+        public static void Move(Model.POCO.MailInfo _mail, Model.POCO.FolderInfo _folder, string _condition, string _subject)
         {
             Model.POCO.Move record = new Model.POCO.Move();
             record.SenderEmailAddress = _mail.SenderEmailAddress;
             record.EntryID = _folder.EntryID;
             record.FolderPath = _folder.FolderPath;
             record.StoreID = _folder.StoreID;
+            record.Condition = _condition;
+            record.Subject = _subject;
 
             Model.DB.CreateMove(record);
         }

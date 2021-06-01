@@ -59,5 +59,11 @@ namespace OutlookCaptureEmailAddIn
                 form.ShowDialog();
             }
         }
+
+        private void button3_Click(object sender, RibbonControlEventArgs e)
+        {
+            Form2 form = new Form2();
+            form.ShowDialog();
+        }
     }
 }

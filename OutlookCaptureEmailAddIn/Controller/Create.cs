@@ -12,6 +12,7 @@ namespace OutlookCaptureEmailAddIn.Controller
         {
             Model.POCO.Delete record = new Model.POCO.Delete();
             record.SenderEmailAddress = _info.SenderEmailAddress;
+            record.StoreID = _info.StoreID;
 
             Model.DB.CreateDelete(record);
         }

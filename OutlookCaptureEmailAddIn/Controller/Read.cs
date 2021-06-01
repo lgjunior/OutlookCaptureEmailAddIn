@@ -71,7 +71,7 @@ namespace OutlookCaptureEmailAddIn.Controller
 
             Model.POCO.Delete ret = new Model.POCO.Delete();
 
-            ret = rowColl.Where(r => r.SenderEmailAddress == _info.SenderEmailAddress).FirstOrDefault();
+            ret = rowColl.Where(r => r.SenderEmailAddress == _info.SenderEmailAddress && r.StoreID == _info.StoreID).FirstOrDefault();
 
             return ret;
         }
@@ -85,6 +85,37 @@ namespace OutlookCaptureEmailAddIn.Controller
             ret = rowColl.Where(r => r.SenderEmailAddress == _info.SenderEmailAddress).FirstOrDefault();
 
             return ret;
+        }
+
+        public static List<Model.POCO.Rule> GetAllRules()
+        {
+            List<Model.POCO.Rule> ret = new List<Model.POCO.Rule>();
+
+            foreach(var record in Model.DB.ReadAllDelete())
+            {
+                Model.POCO.Rule rule = new Model.POCO.Rule();
+                rule.Email = record.SenderEmailAddress;
+                rule.Action = "DELETE";
+                rule.Target = "";
+                rule.StoreID = record.StoreID;
+
+                ret.Add(rule);
+            }
+
+            foreach (var record in Model.DB.ReadAllMove())
+            {
+                Model.POCO.Rule rule = new Model.POCO.Rule();
+                rule.Email = record.SenderEmailAddress;
+                rule.Action = "MOVE";
+                rule.Target = record.FolderPath;
+                rule.StoreID = record.StoreID;
+
+                ret.Add(rule);
+            }
+
+            var selected = Selection();
+
+            return ret.Where(r => r.StoreID == selected.StoreID).OrderBy(r => r.Email).ToList();
         }
     }
 }

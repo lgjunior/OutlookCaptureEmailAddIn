@@ -44,7 +44,7 @@ namespace OutlookCaptureEmailAddIn
             bool hasRule = ruleColl.Where(r => r.SenderEmailAddress == mail.SenderEmailAddress).Count() > 0;
             if (hasRule)
             {
-                if(condition == "SUBJECT")
+                if(condition == "Subject")
                 {
                     hasRule = ruleColl.Where(r => r.Subject == subject).Count() > 0;
                 }

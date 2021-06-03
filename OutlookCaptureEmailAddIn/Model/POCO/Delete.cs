@@ -12,5 +12,6 @@ namespace OutlookCaptureEmailAddIn.Model.POCO
         public ObjectId _id { get; set; }
         public string SenderEmailAddress { get; set; }
         public String StoreID { get; set; }
+        public String Condition { get; set; }
     }
 }

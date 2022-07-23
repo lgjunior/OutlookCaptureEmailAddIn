@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OutlookCaptureEmailAddIn.Model.POCO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,26 +9,26 @@ namespace OutlookCaptureEmailAddIn.Controller
 {
     public static class Create
     {
-        public static void Delete(Model.POCO.MailInfo _info)
+        public static void MoveRule(MailInfo _mailInfo, String _selected, String _value, String _FolderPath)
+        {
+            Model.POCO.Move record = new Model.POCO.Move();
+            record.StoreID = _mailInfo.StoreID;
+            record.Value = _value;
+            record.Field = _selected;
+            record.FolderPath = _FolderPath;
+
+            Model.DB.CreateMove(record);
+        }
+
+        public static void DeleteRule(MailInfo _mailInfo, String _selected, String _value)
         {
             Model.POCO.Delete record = new Model.POCO.Delete();
-            record.SenderEmailAddress = _info.SenderEmailAddress;
-            record.StoreID = _info.StoreID;
+            record.StoreID = _mailInfo.StoreID;
+            record.Value = _value;
+            record.Field = _selected;
 
             Model.DB.CreateDelete(record);
         }
 
-        public static void Move(Model.POCO.MailInfo _mail, Model.POCO.FolderInfo _folder, string _condition, string _subject)
-        {
-            Model.POCO.Move record = new Model.POCO.Move();
-            record.SenderEmailAddress = _mail.SenderEmailAddress;
-            record.EntryID = _folder.EntryID;
-            record.FolderPath = _folder.FolderPath;
-            record.StoreID = _folder.StoreID;
-            record.Condition = _condition;
-            record.Subject = _subject;
-
-            Model.DB.CreateMove(record);
-        }
     }
 }

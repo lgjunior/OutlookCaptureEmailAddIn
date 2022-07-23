@@ -30,7 +30,7 @@ namespace OutlookCaptureEmailAddIn
 
             foreach (var doc in Controller.Read.GetAllRules())
             {
-                dataGridView1.Rows.Add(doc.Email, doc.Action, doc.Target);
+                dataGridView1.Rows.Add(doc.Value, doc.Action, doc.Target);
             }
         }
     }

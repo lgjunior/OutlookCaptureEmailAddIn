@@ -10,11 +10,9 @@ namespace OutlookCaptureEmailAddIn.Model.POCO
     public class Move
     {
         public ObjectId _id { get; set; }
-        public string SenderEmailAddress { get; set; }
-        public String EntryID { get; set; }
-        public String FolderPath { get; set; }
         public String StoreID { get; set; }
-        public String Subject { get; set; }
-        public String Condition { get; set; }
+        public String Field { get; set; }
+        public String Value { get; set; }
+        public String FolderPath { get; set; }
     }
 }

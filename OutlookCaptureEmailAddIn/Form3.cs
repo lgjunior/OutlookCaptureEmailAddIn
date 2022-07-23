@@ -10,26 +10,20 @@ using System.Windows.Forms;
 
 namespace OutlookCaptureEmailAddIn
 {
-    public partial class Form1 : Form
+    public partial class Form3 : Form
     {
         Model.POCO.MailInfo mail;
         string selected = "";
         string value = "";
 
-        public Form1()
+        public Form3()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form3_Load(object sender, EventArgs e)
         {
-            var folderColl = Controller.Read.FolderCollection();
-
             mail = Controller.Read.Selection();
-
-            listBox1.DataSource = folderColl;
-            listBox1.DisplayMember = "FolderPath";
-            listBox1.ValueMember = "EntryID";
 
             txReplyRecipientName.Text = mail.ReplyRecipientNames;
             txSenderEmailAddress.Text = mail.SenderEmailAddress;
@@ -45,38 +39,13 @@ namespace OutlookCaptureEmailAddIn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Model.POCO.FolderInfo folder = (Model.POCO.FolderInfo)listBox1.SelectedItem;
-
-            Controller.Create.MoveRule(mail, selected, value, folder.FolderPath);
+            Controller.Create.DeleteRule(mail, selected, value);
             this.Close();
+        }
 
-            /*
-            var ruleColl = Model.DB.ReadAllMove();
-            bool hasRule = ruleColl.Where(r => r.SenderEmailAddress == mail.SenderEmailAddress).Count() > 0;
-            if (hasRule)
-            {
-                if(condition == "SUBJECT")
-                {
-                    hasRule = ruleColl.Where(r => r.Subject == subject).Count() > 0;
-                }
-            }
-
-            if (!hasRule)
-            {
-                Controller.Create.Move(mail, folder, condition, subject);
-            }
-            else
-            {
-                List<string> message = new List<string>();
-                message.Add("The following rule exist:");
-                message.Add("SenderEmailAddress: " + mail.SenderEmailAddress);
-                message.Add("Condition: " + condition);
-                message.Add("Subject: " + subject);
-                MessageBox.Show(String.Join("\n", message), "Information", MessageBoxButtons.OK);
-            }
-
+        private void button2_Click(object sender, EventArgs e)
+        {
             this.Close();
-            */
         }
 
         private void txSenderName_TextChanged(object sender, EventArgs e)
@@ -155,11 +124,6 @@ namespace OutlookCaptureEmailAddIn
         {
             selected = "Header";
             value = txHeader.Text;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

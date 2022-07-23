@@ -21,20 +21,23 @@ namespace OutlookCaptureEmailAddIn
 
             var rule = Controller.Read.FindDeleteRule(mail);
 
-            if(mail.SenderEmailAddress.IndexOf("@") == -1 && !mail.SenderEmailAddress.StartsWith(@"/"))
-            {
-                string message = mail.SenderEmailAddress + " is an invalid email";
-                MessageBox.Show(message, "Information", MessageBoxButtons.OK);
-            }
-            else if (rule != null)
-            {
-                string message = mail.SenderEmailAddress + " rule already exists";
-                MessageBox.Show(message, "Information", MessageBoxButtons.OK);
-            }
-            else
-            {
-                Controller.Create.Delete(mail);
-            }
+            //if(mail.SenderEmailAddress.IndexOf("@") == -1 && !mail.SenderEmailAddress.StartsWith(@"/"))
+            //{
+            //    string message = mail.SenderEmailAddress + " is an invalid email";
+            //    MessageBox.Show(message, "Information", MessageBoxButtons.OK);
+            //}
+            //else if (rule != null)
+            //{
+            //    string message = mail.SenderEmailAddress + " rule already exists";
+            //    MessageBox.Show(message, "Information", MessageBoxButtons.OK);
+            //}
+            //else
+            //{
+            //    Controller.Create.Delete(mail);
+            //}
+
+            Form3 form = new Form3();
+            form.ShowDialog();
         }
 
         private void button2_Click(object sender, RibbonControlEventArgs e)

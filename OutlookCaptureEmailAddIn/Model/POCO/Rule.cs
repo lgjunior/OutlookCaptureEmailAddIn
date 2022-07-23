@@ -8,7 +8,8 @@ namespace OutlookCaptureEmailAddIn.Model.POCO
 {
     public class Rule
     {
-        public string Email { get; set; }
+        public String Field { get; set; }
+        public String Value { get; set; }
         public string Action { get; set; }
         public string Target { get; set; }
         public String StoreID { get; set; }

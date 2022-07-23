@@ -30,6 +30,8 @@
     <DefineConstants>VSTO40</DefineConstants>
     <TargetFrameworkProfile />
     <IsWebBootstrapper>False</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <PublishUrl>N:\</PublishUrl>
     <InstallUrl />
@@ -45,8 +47,6 @@
     <FriendlyName>OutlookCaptureEmailAddIn</FriendlyName>
     <OfficeApplicationDescription />
     <LoadBehavior>3</LoadBehavior>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6">
@@ -286,6 +286,7 @@
     <None Include="libmongocrypt.dylib" />
     <None Include="libmongocrypt.so" />
     <None Include="OutlookCaptureEmailAddIn_1_TemporaryKey.pfx" />
+    <None Include="OutlookCaptureEmailAddIn_5_TemporaryKey.pfx" />
     <None Include="OutlookCaptureEmailAddIn_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -328,10 +329,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>OutlookCaptureEmailAddIn_1_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>OutlookCaptureEmailAddIn_5_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>5C6902F42FC7FC052FD08669B704427211BA8D97</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>96475C643FA8426520A866866CD3AB6C579BF8F9</ManifestCertificateThumbprint>
   </PropertyGroup>
   <!-- Include the build rules for a C# project. -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

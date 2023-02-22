@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txHeader = new System.Windows.Forms.TextBox();
             this.rbHeader = new System.Windows.Forms.RadioButton();
@@ -44,36 +41,11 @@
             this.txReplyRecipientName = new System.Windows.Forms.TextBox();
             this.txSenderEmailAddress = new System.Windows.Forms.TextBox();
             this.txSentOnBehalfOfName = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(511, 13);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(277, 420);
-            this.listBox1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 24);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(93, 13);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox1
             // 
@@ -92,7 +64,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 47);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(493, 391);
-            this.groupBox1.TabIndex = 11;
+            this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
@@ -216,6 +188,34 @@
             this.txSentOnBehalfOfName.TabIndex = 5;
             this.txSentOnBehalfOfName.TextChanged += new System.EventHandler(this.txSentOnBehalfOfName_TextChanged);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(93, 13);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Cancel";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 24);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Save";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(511, 13);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(277, 420);
+            this.listBox1.TabIndex = 12;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,7 +226,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listBox1);
             this.Name = "Form1";
-            this.Text = "Move Rule";
+            this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -236,9 +236,6 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txHeader;
         private System.Windows.Forms.RadioButton rbHeader;
@@ -252,5 +249,8 @@
         private System.Windows.Forms.TextBox txReplyRecipientName;
         private System.Windows.Forms.TextBox txSenderEmailAddress;
         private System.Windows.Forms.TextBox txSentOnBehalfOfName;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

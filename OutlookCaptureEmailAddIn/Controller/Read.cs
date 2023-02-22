@@ -79,9 +79,9 @@ namespace OutlookCaptureEmailAddIn.Controller
                 ret.OutlookInternalVersion = Convert.ToString(mailItem.OutlookInternalVersion);
                 ret.OutlookVersion = Convert.ToString(mailItem.OutlookVersion);
                 ret.Parent = Convert.ToString(mailItem.Parent);
-                ret.Permission = Convert.ToString(mailItem.Permission);
-                ret.PermissionService = Convert.ToString(mailItem.PermissionService);
-                ret.PermissionTemplateGuid = Convert.ToString(mailItem.PermissionTemplateGuid);
+                //ret.Permission = Convert.ToString(mailItem.Permission);
+                //ret.PermissionService = Convert.ToString(mailItem.PermissionService);
+                //ret.PermissionTemplateGuid = Convert.ToString(mailItem.PermissionTemplateGuid);
                 ret.PropertyAccessor = Convert.ToString(mailItem.PropertyAccessor);
                 ret.ReadReceiptRequested = Convert.ToString(mailItem.ReadReceiptRequested);
                 ret.ReceivedByEntryID = Convert.ToString(mailItem.ReceivedByEntryID);
@@ -103,7 +103,7 @@ namespace OutlookCaptureEmailAddIn.Controller
                 //ret.RetentionPolicyName = Convert.ToString(mailItem.RetentionPolicyName);
                 ret.RTFBody = Convert.ToString(mailItem.RTFBody);
                 ret.Saved = Convert.ToString(mailItem.Saved);
-                ret.SaveSentMessageFolder = Convert.ToString(mailItem.SaveSentMessageFolder);
+                //ret.SaveSentMessageFolder = Convert.ToString(mailItem.SaveSentMessageFolder);
                 ret.Sender = Convert.ToString(mailItem.Sender);
                 ret.SenderEmailAddress = Convert.ToString(mailItem.SenderEmailAddress);
                 ret.SenderEmailType = Convert.ToString(mailItem.SenderEmailType);

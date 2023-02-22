@@ -21,27 +21,6 @@ namespace OutlookCaptureEmailAddIn
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            var folderColl = Controller.Read.FolderCollection();
-
-            mail = Controller.Read.Selection();
-
-            listBox1.DataSource = folderColl;
-            listBox1.DisplayMember = "FolderPath";
-            listBox1.ValueMember = "EntryID";
-
-            txReplyRecipientName.Text = mail.ReplyRecipientNames;
-            txSenderEmailAddress.Text = mail.SenderEmailAddress;
-            txSenderName.Text = mail.SenderName;
-            txSentOnBehalfOfName.Text = mail.SentOnBehalfOfName;
-            txSubject.Text = mail.Subject;
-            txHeader.Text = mail.Header;
-
-            rbSenderEmailAddress.Checked = true;
-            selected = "SenderEmailAddress";
-            value = txSenderEmailAddress.Text;
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -161,5 +140,28 @@ namespace OutlookCaptureEmailAddIn
         {
             this.Close();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            var folderColl = Controller.Read.FolderCollection();
+
+            mail = Controller.Read.Selection();
+
+            listBox1.DataSource = folderColl;
+            listBox1.DisplayMember = "FolderPath";
+            listBox1.ValueMember = "EntryID";
+
+            txReplyRecipientName.Text = mail.ReplyRecipientNames;
+            txSenderEmailAddress.Text = mail.SenderEmailAddress;
+            txSenderName.Text = mail.SenderName;
+            txSentOnBehalfOfName.Text = mail.SentOnBehalfOfName;
+            txSubject.Text = mail.Subject;
+            txHeader.Text = mail.Header;
+
+            rbSenderEmailAddress.Checked = true;
+            selected = "SenderEmailAddress";
+            value = txSenderEmailAddress.Text;
+        }
+
     }
 }

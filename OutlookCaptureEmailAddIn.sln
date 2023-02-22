@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2048
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutlookCaptureEmailAddIn", "OutlookCaptureEmailAddIn\OutlookCaptureEmailAddIn.csproj", "{11F2A78A-3378-4F3F-B878-666195D68681}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutlookCaptureEmailAddIn", "OutlookCaptureEmailAddIn\OutlookCaptureEmailAddIn.csproj", "{7144FFD9-F5B9-4FD7-8DAC-BF8885A45EB9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{11F2A78A-3378-4F3F-B878-666195D68681}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{11F2A78A-3378-4F3F-B878-666195D68681}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{11F2A78A-3378-4F3F-B878-666195D68681}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{11F2A78A-3378-4F3F-B878-666195D68681}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7144FFD9-F5B9-4FD7-8DAC-BF8885A45EB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7144FFD9-F5B9-4FD7-8DAC-BF8885A45EB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7144FFD9-F5B9-4FD7-8DAC-BF8885A45EB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7144FFD9-F5B9-4FD7-8DAC-BF8885A45EB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

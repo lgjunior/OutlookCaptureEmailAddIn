@@ -38,7 +38,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(776, 426);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.TabIndex = 1;
             // 
             // Form2
             // 
@@ -48,7 +48,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form2";
             this.Text = "Form2";
-            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

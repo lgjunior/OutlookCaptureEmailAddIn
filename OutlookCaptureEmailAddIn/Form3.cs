@@ -21,21 +21,6 @@ namespace OutlookCaptureEmailAddIn
             InitializeComponent();
         }
 
-        private void Form3_Load(object sender, EventArgs e)
-        {
-            mail = Controller.Read.Selection();
-
-            txReplyRecipientName.Text = mail.ReplyRecipientNames;
-            txSenderEmailAddress.Text = mail.SenderEmailAddress;
-            txSenderName.Text = mail.SenderName;
-            txSentOnBehalfOfName.Text = mail.SentOnBehalfOfName;
-            txSubject.Text = mail.Subject;
-            txHeader.Text = mail.Header;
-
-            rbSenderEmailAddress.Checked = true;
-            selected = "SenderEmailAddress";
-            value = txSenderEmailAddress.Text;
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -124,6 +109,36 @@ namespace OutlookCaptureEmailAddIn
         {
             selected = "Header";
             value = txHeader.Text;
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            mail = Controller.Read.Selection();
+
+            txReplyRecipientName.Text = mail.ReplyRecipientNames;
+            txSenderEmailAddress.Text = mail.SenderEmailAddress;
+            txSenderName.Text = mail.SenderName;
+            txSentOnBehalfOfName.Text = mail.SentOnBehalfOfName;
+            txSubject.Text = mail.Subject;
+            txHeader.Text = mail.Header;
+            txSenderEmailAddressDomain.Text = "@" + txSenderEmailAddress.Text.Split('@')[1];
+
+            rbSenderEmailAddress.Checked = true;
+            selected = "SenderEmailAddress";
+            value = txSenderEmailAddress.Text;
+        }
+
+        private void rbSenderEmailAddressDomain_CheckedChanged(object sender, EventArgs e)
+        {
+            selected = "SenderEmailAddress";
+            value = "@" + txSenderEmailAddress.Text.Split('@')[1];
+        }
+
+        private void txSenderEmailAddressDomain_TextChanged(object sender, EventArgs e)
+        {
+            rbSenderEmailAddressDomain.Checked = true;
+            selected = "SenderEmailAddress";
+            value = "@" + txSenderEmailAddress.Text.Split('@')[1];
         }
     }
 }

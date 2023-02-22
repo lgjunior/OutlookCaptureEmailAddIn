@@ -11,7 +11,7 @@ using System.Security;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("OutlookCaptureEmailAddIn")]
-[assembly: AssemblyCopyright("Copyright ©  2021")]
+[assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -21,7 +21,7 @@ using System.Security;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("3edfb4ba-08c4-487f-9639-4f910e0e9cbf")]
+[assembly: Guid("dbd2584c-769d-421c-8757-3197992588a4")]
 
 // Version information for an assembly consists of the following four values:
 //
